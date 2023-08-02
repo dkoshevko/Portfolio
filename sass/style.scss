@@ -1,0 +1,18 @@
+// Import utilities
+@import "./utilities/variables.scss";
+@import "./utilities/mixins.scss";
+
+// Import parts
+@import "./parts/header.scss";
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: $light-gray;
+}

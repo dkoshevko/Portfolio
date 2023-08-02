@@ -1,0 +1,27 @@
+@import "../utilities/variables.scss";
+@import "../utilities/mixins.scss";
+
+header {
+    @include center-content;
+    @include flex-center;
+    max-width: 1440px;
+    background-color: $very-dark-blue;
+    height: 60px;
+    border-radius: 0 0 15px 15px;
+}
+
+nav {
+    width: 70%;
+}
+
+ul {
+    @include flex(row, space-between, normal);
+    list-style-type: none;
+}
+
+li a {
+    text-decoration: none;
+    color: $light-gray;
+    font-weight: 500;
+    font-size: larger;
+}

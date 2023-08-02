@@ -1,0 +1,41 @@
+header {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  background-color: #1E2A3B;
+  height: 60px;
+  border-radius: 0 0 15px 15px;
+}
+
+nav {
+  width: 70%;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: normal;
+  list-style-type: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #A0B0C6;
+  font-weight: 500;
+  font-size: larger;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #A0B0C6;
+}
+
+/*# sourceMappingURL=style.css.map */
