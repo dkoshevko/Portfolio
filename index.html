@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
     <title>Denys Koshevko</title>
+    <script src="https://kit.fontawesome.com/042d4f2146.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<!-- :::::::::::::Menu de navigation::::::::::::: -->
     <header>
         <nav>
             <ul>
@@ -18,26 +20,202 @@
         </nav>
     </header>
     <main>
-        <section>
-            <img src="" alt="">
-        </section>
-        <section id="presentation">
-            <article>
-                <!-- 4 points forts -->
+<!-- :::::::::::::Présentation::::::::::::: -->
+        <section id="presentation" class="presentation">
+            <article class="presentation__about">
+                <div class="presentation__about--text">
+                    <h1>Bonjour ! <br>Je suis Denys Koshevko <br>développeur Front-End</h1>
+                    <p>Passionné par la création d'expériences utilisateur exceptionnelles et convaincu que les petits détails font toute la différence.</p>
+                    <p>Mon objectif est de concevoir des solutions élégantes et performantes qui répondent aux besoins spécifiques de chaque client. Je suis toujours en quête de nouvelles technologies et de tendances pour rester à la pointe de l'innovation.</p>
+                    <p>Je suis enthousiaste à l'idée de créer de belles expériences numériques ensemble. Faisons de la magie sur le web !</p>
+                </div>
             </article>
-            <article>
-                <!-- presentation -->
+<!-- :::::::::::::Technologies maitrisées::::::::::::: -->
+            <article class="presentation__assets">
+                <div class="presentation__assets--skill">
+                    <img src="/images/skills/html-5.png" alt="HTML5">
+                    <span>HTML</span>
+                </div>
+                <div class="presentation__assets--skill">
+                    <img src="/images/skills/css-3.png" alt="CSS3">
+                    <span>CSS</span>
+                </div>
+                <div class="presentation__assets--skill">
+                    <img src="/images/skills/sass.png" alt="SASS">
+                    <span>SASS</span>
+                </div>
+                <div class="presentation__assets--skill">
+                    <img src="/images/skills/js.png" alt="JavaScript">
+                    <span>JavaScript</span>
+                </div>
+                <div class="presentation__assets--skill">
+                    <img src="/images/skills/react.png" alt="React">
+                    <span>React</span>
+                </div>
+                <div class="presentation__assets--skill">
+                    <img src="/images/skills/nodejs.png" alt="NodeJS">
+                    <span>NodeJS</span>
+                </div>
+                <div class="presentation__assets--skill">
+                    <img src="/images/skills/wordpress.png" alt="WordPress">
+                    <span>WordPress</span>
+                </div>
+                <div class="presentation__assets--skill">
+                    <img src="/images/skills/figma.png" alt="Figma">
+                    <span>Figma</span>
+                </div>
+                <div class="presentation__assets--skill">
+                    <img src="/images/skills/git.png" alt="Git">
+                    <span>Git</span>
+                </div>
+                <div class="presentation__assets--skill">
+                    <img src="/images/skills/github.png" alt="GitHub">
+                    <span>GitHub</span>
+                </div>
             </article>
         </section>
-        <section id="realisations">
-            <!-- realisations -->
+<!-- :::::::::::::Les réalisations::::::::::::: -->
+        <section id="realisations" class="realisations">
+            <aside class="realisations__comment">
+                <img class="memoji" src="/images/memoji-2.png" alt="Memoji">
+                <h2>Jetez un œil à <br>Mon Portfolio</h2>
+                <p>Tous ces projets ont été réalisés <br>dans les délais et livrés au client.</p>
+                <p>Vous souhaitez la même chose ?</p><br>
+                <a href="mailto:dkoshevko@gmail.com">
+                    <div class="realisations__comment--mail-btn">
+                        Contactez-moi <i class="fa-solid fa-envelope"></i>
+                    </div>
+                </a>
+            </aside>
+            <article class="realisations__gallery">
+                <a href="https://dkoshevko.github.io/P2-Booki-Denys-Koshevko/" target="_blank" rel="noopener noreferrer">
+                    <div class="realisations__gallery--project">
+                        <div class="realisations__gallery--project__overlay"></div>
+                        <img src="/images/projects/booki.webp" alt="Booki">
+                        <div class="realisations__gallery--project__caption">
+                            <h3>Booki</h3>
+                            <p>Intégration simple à partir d'une maquette dans le cadre de ma formation OpenClassrooms de Développeur Front-End.</p>
+                        </div>
+                        <div class="realisations__gallery--project__technologies">
+                            <div class="realisations__gallery--project__technologies--tech">
+                                <span>HTML</span>
+                            </div>
+                            <div class="realisations__gallery--project__technologies--tech">
+                                <span>CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://dkoshevko.github.io/P6-Kasa-Denys-Koshevko/" target="_blank" rel="noopener noreferrer">
+                    <div class="realisations__gallery--project">
+                        <div class="realisations__gallery--project__overlay"></div>
+                        <img src="/images/projects/kasa.webp" alt="Kasa">
+                        <div class="realisations__gallery--project__caption">
+                            <h3>Kasa</h3>
+                            <p>Développement d'une application React à partir d'une maquette dans le cadre de ma formation OpenClassrooms de Développeur Front-End.</p>
+                        </div>
+                        <div class="realisations__gallery--project__technologies">
+                            <div class="realisations__gallery--project__technologies--tech">
+                                <span>HTML</span>
+                            </div>
+                            <div class="realisations__gallery--project__technologies--tech">
+                                <span>SASS</span>
+                            </div>
+                            <div class="realisations__gallery--project__technologies--tech">
+                                <span>React</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://chauffeur-vtc-grenoble.fr/" target="_blank" rel="noopener noreferrer">
+                    <div class="realisations__gallery--project">
+                        <div class="realisations__gallery--project__overlay"></div>
+                        <img src="/images/projects/vtc-grenoble.webp" alt="Chauffeur-VTC-Grenoble">
+                        <div class="realisations__gallery--project__caption">
+                            <h3>Chauffeur VTC Grenoble</h3>
+                            <p>Conception et développement d'un site vitrine basique pour un client en tant que Développeur freelance.</p>
+                        </div>
+                        <div class="realisations__gallery--project__technologies">
+                            <div class="realisations__gallery--project__technologies--tech">
+                                <span>WordPress</span>
+                            </div>
+                            <div class="realisations__gallery--project__technologies--tech">
+                                <span>CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://lairedejus.fr/" target="_blank" rel="noopener noreferrer">
+                    <div class="realisations__gallery--project">
+                        <div class="realisations__gallery--project__overlay"></div>
+                        <img src="/images/projects/laire-de-jus.webp" alt="L'aire de Jus">
+                        <div class="realisations__gallery--project__caption">
+                            <h3>L'aire de Jus</h3>
+                            <p>Conception et développement d'une boutique en ligne durant stage en tant que Webdesigner dans le cadre de ma formation de Designer UI.</p>
+                        </div>
+                        <div class="realisations__gallery--project__technologies">
+                            <div class="realisations__gallery--project__technologies--tech">
+                                <span>WordPress</span>
+                            </div>
+                            <div class="realisations__gallery--project__technologies--tech">
+                                <span>CSS</span>
+                            </div>
+                            <div class="realisations__gallery--project__technologies--tech">
+                                <span>Figma</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.centre-de-vacances-ukrainien.fr/accueil/" target="_blank" rel="noopener noreferrer">
+                    <div class="realisations__gallery--project">
+                        <div class="realisations__gallery--project__overlay"></div>
+                        <img src="/images/projects/rosey.webp" alt="Centre de vacances ukrainien">
+                        <div class="realisations__gallery--project__caption">
+                            <h3>Centre de vacances ukrainien</h3>
+                            <p>Reprise et mise à jour du site existant en optimisant le design pour les differents supports. Je m'occupe également de sa maintenance.</p>
+                        </div>
+                        <div class="realisations__gallery--project__technologies">
+                            <div class="realisations__gallery--project__technologies--tech">
+                                <span>WordPress</span>
+                            </div>
+                            <div class="realisations__gallery--project__technologies--tech">
+                                <span>CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/dkoshevko" target="_blank" rel="noopener noreferrer">
+                    <div class="realisations__gallery--project">
+                        <div class="realisations__gallery--project__overlay"></div>
+                        <img src="/images/skills/github.png" alt="GitHub">
+                        <div class="realisations__gallery--project__caption">
+                            <h3>Voir plus sur GitHub</h3>
+                            <p>Vous y trouverez des projets de développement et d'utilisation d'API REST, d'optimisation ainsi que les projets vu précedemment.</p>
+                        </div>
+                    </div>
+                </a>
+            </article>
         </section>
-        <section id="certifications">
-            <!-- certifications -->
-        </section>
+<!-- :::::::::::::Les certifications::::::::::::: -->
+        <section id="certifications"></section>
     </main>
-    <footer id="contact">
-        <!-- contact -->
+<!-- :::::::::::::Contact::::::::::::: -->
+    <footer id="contact" class="contact">
+        <div class="contact__container">
+            <img class="memoji" src="/images/memoji-3.png" alt="Memoji">
+            <h5>Me contacter</h5>
+            <p>N'hésitez pas à me contacter si vous avez une idée de projet en tête ou avez besoin d'un conseil. Actuellement, mon emploi du temps se remplit rapidement, plus tôt vous écrivez, mieux c'est.</p>
+            <div class="contact__container--socials">
+                <i class="fa-brands fa-linkedin-in"></i>
+                <i class="fa-brands fa-github"></i>
+                <img class="malt-logo" src="/images/malt.png" alt="Logo Malt">
+            </div>
+            <a href="mailto:dkoshevko@gmail.com">
+                <div class="contact__container--mail-btn">
+                    Contactez-moi <i class="fa-solid fa-envelope"></i><i class="fa-solid fa-paper-plane" style="display: none;"></i>
+                </div>
+            </a>
+        </div>
     </footer>
 </body>
 </html>

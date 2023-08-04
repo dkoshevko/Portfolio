@@ -3,10 +3,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1440px;
   background-color: #1E2A3B;
   height: 60px;
-  border-radius: 0 0 15px 15px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 10;
 }
 
 nav {
@@ -16,16 +18,275 @@ nav {
 ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: normal;
   list-style-type: none;
 }
 
 li a {
   text-decoration: none;
-  color: #A0B0C6;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.presentation {
+  background: rgb(30, 42, 59);
+  background: linear-gradient(180deg, rgb(30, 42, 59) 10%, rgb(69, 98, 135) 50%, rgb(160, 176, 198) 100%);
+  position: relative;
+}
+.presentation__about {
+  position: relative;
+  max-width: 1440px;
+  padding: 70px 0;
+  margin: 0 auto;
+}
+.presentation__about::before {
+  content: "";
+  height: 440px;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/images/laptop.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  mix-blend-mode: lighten;
+  animation-name: fly;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  /* Animation keyframes pour voler vers le haut */
+}
+@keyframes fly {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+.presentation__about--text {
+  position: relative;
+  z-index: 2;
+  line-height: 1.7em;
+  color: #fff;
+}
+.presentation__about--text h1 {
+  font-size: 50px;
   font-weight: 500;
-  font-size: larger;
+  line-height: 1.3em;
+}
+.presentation__about--text p {
+  margin-top: 1rem;
+  font-weight: 400;
+  font-size: 18px;
+}
+.presentation__assets {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+.presentation__assets--skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 14px;
+}
+.presentation__assets--skill img {
+  height: 60px;
+}
+
+.realisations {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+.realisations__comment {
+  max-width: 20%;
+}
+.realisations__comment h2 {
+  font-weight: 600;
+  font-size: 26px;
+}
+.realisations__comment p, .realisations__comment h2 {
+  margin-bottom: 1rem;
+}
+.realisations__comment p {
+  color: #1E2A3B;
+  font-size: 18px;
+  font-weight: 300;
+}
+.realisations__comment--mail-btn {
+  width: fit-content;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  background-color: #1E2A3B;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  transition: transform 300ms ease-in-out;
+}
+.realisations__comment--mail-btn:hover {
+  transform: scale(1.1);
+}
+.realisations__gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 80%;
+}
+.realisations__gallery--project {
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  width: 17vw;
+  max-width: 330px;
+  border-radius: 10px;
+  aspect-ratio: 1/1 !important;
+  background-color: #fff;
+  transition: transform 300ms ease-in-out;
+}
+.realisations__gallery--project img {
+  width: 17vw;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.realisations__gallery--project__caption {
+  position: absolute;
+  bottom: 0;
+  text-align: left;
+  padding: 10px;
+  color: #fff;
+}
+.realisations__gallery--project__caption h3 {
+  margin-bottom: 0.2rem;
+  font-weight: 500;
+  font-size: 20px;
+}
+.realisations__gallery--project__caption p {
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  font-size: 15px;
+}
+.realisations__gallery--project__technologies {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  gap: 0.5rem;
+}
+.realisations__gallery--project__technologies--tech {
+  background-color: #fff;
+  color: #1E2A3B;
+  font-weight: 700;
+  font-size: 16px;
+  border: 2px solid #1E2A3B;
+  border-radius: 25px;
+  padding: 0.2rem 0.5rem;
+}
+.realisations__gallery--project__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(0, 0, 0) 100%);
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.realisations__gallery--project:hover {
+  transform: scale(1.1);
+}
+
+.contact {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.contact__container {
+  background-color: #1E2A3B;
+  border-radius: 10px;
+  width: 1000px;
+  max-width: 1440px;
+  padding: 3rem 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact__container h5 {
+  font-size: 3em;
+  font-weight: 600;
+}
+.contact__container p {
+  width: 50rem;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+.contact__container--socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.contact__container--socials .fa-linkedin-in, .contact__container--socials .fa-github {
+  font-size: 1.5em;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  padding: 0.7rem;
+  width: 7.5%;
+  text-align: center;
+}
+.contact__container--socials .malt-logo {
+  width: 7.5%;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  padding: 0.7rem;
+}
+.contact__container--mail-btn {
+  width: fit-content;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  transition: transform 300ms ease-in-out;
+}
+.contact__container--mail-btn:hover {
+  transform: scale(1.1);
+}
+.contact__container--mail-btn:hover .fa-envelope {
+  display: none;
+}
+.contact__container--mail-btn:hover .fa-paper-plane {
+  display: inline-block !important;
 }
 
 * {
@@ -36,6 +297,14 @@ li a {
 
 body {
   background-color: #A0B0C6;
+}
+
+a {
+  text-decoration: none;
+}
+
+.memoji {
+  height: 120px;
 }
 
 /*# sourceMappingURL=style.css.map */

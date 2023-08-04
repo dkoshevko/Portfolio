@@ -1,0 +1,84 @@
+// Import utilities
+@import "../utilities/variables.scss";
+@import "../utilities/mixins.scss";
+
+.presentation {
+    background: rgb(30,42,59);
+    background: linear-gradient(180deg, rgba(30,42,59,1) 10%, rgba(69,98,135,1) 50%, rgba(160,176,198,1) 100%);
+    position: relative;
+    
+    &__about {
+        position: relative;
+        max-width: 1440px;
+        padding: 70px 0;
+        @include center-content;
+        
+        &::before {
+            content: "";
+            height: 440px;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("/images/laptop.png");
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: contain;
+            mix-blend-mode: lighten;
+            animation-name: fly;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+
+            /* Animation keyframes pour voler vers le haut */
+            @keyframes fly {
+                0%, 100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-20px);
+                }
+            }
+        }
+
+        &--text {
+            position: relative;
+            z-index: 2;
+            line-height: 1.7em;
+            color: #fff;
+
+            h1 {
+                font-size: 50px;
+                font-weight: 500;
+                line-height: 1.3em;
+            }
+
+            p {
+                margin-top: 1rem;
+                font-weight: 400;
+                font-size: 18px;
+            }
+
+        }
+    }
+
+    &__assets {
+        @include center-content;
+        @include flex(row, center, center);
+        flex-wrap: wrap;
+        gap: 3rem;
+        max-width: 1200px;
+        margin: 50px auto;
+
+        &--skill {
+            @include flex(column, center, center);
+            gap: 0.5rem;
+            font-size: 14px;
+
+            img {
+                height: 60px;
+            }
+        }
+    }
+}
