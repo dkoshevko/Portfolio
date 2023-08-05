@@ -6,7 +6,7 @@
 @import "./parts/header.scss";
 @import "./parts/presentation.scss";
 @import "./parts/realisations.scss";
-
+@import "./parts/certifications.scss";
 @import "./parts/footer.scss";
 
 
@@ -16,18 +16,13 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-// body {
-//     height: 100vh;
-//     overflow: hidden;
-//     background: black;
-// }
-
 body {
     background-color: $light-gray;
 }
 
 a {
     text-decoration: none;
+    color: #fff;
 }
 
 .memoji {

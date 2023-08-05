@@ -4,16 +4,24 @@
 
 .contact {
     @include center-content;
-    @include flex(row, center, center);
+    @include flex(column, space-between, center);
+    padding-top: 50px;
+    background: linear-gradient(0deg, rgba(30,42,59,1) 10%, rgba(69,98,135,1) 50%, rgba(160,176,198,1) 100%);
 
     &__container {
         background-color: $very-dark-blue;
+        background: linear-gradient(90deg, rgba(30,42,59,1) 20%, rgba(69,98,135,1) 75%, rgba(96,136,187,1) 100%);
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
         border-radius: 10px;
         width: 1000px;
         max-width: 1440px;
         padding: 3rem 0;
         color: #fff;
         @include flex(column, center, center);
+
+        background: linear-gradient(45deg, rgba(96,136,187,1) 0%, darken(rgba(30,42,59,1), 50%) 100%);
+        background-size: 200% 200%;
+        animation: bg-animation 6s ease-in-out infinite;
 
         h5 {
             font-size: 3em;
@@ -30,22 +38,29 @@
 
         &--socials {
             @include flex(row, space-evenly, center);
+            gap: 2rem;
             margin-bottom: 2rem;
             
-            .fa-linkedin-in, .fa-github {
-                font-size: 1.5em;
+            a {
                 border: 1px solid #fff;
                 border-radius: 100%;
                 padding: 0.7rem;
-                width: 7.5%;
-                text-align: center;
+                width: 30px;
+                height: 30px;
+                @include flex(row, center, center);
+                transition: transform 300ms ease-in-out;
+            }
+
+            a:hover {
+                transform: scale(1.1);
+            }
+
+            .fa-linkedin-in, .fa-github {
+                font-size: 1.5em;
             }
 
             .malt-logo {
-                width: 7.5%;
-                border: 1px solid #fff;
-                border-radius: 100%;
-                padding: 0.7rem;
+                width: 80%;
             }
         }
 
@@ -61,6 +76,8 @@
         }
         &--mail-btn:hover {
             transform: scale(1.1);
+            color: $very-dark-blue;
+            background-color: #fff;
             
             .fa-envelope {
                 display: none;
@@ -68,6 +85,29 @@
             .fa-paper-plane {
                 display: inline-block !important;
             }
+        }
+    }
+    
+    &__copyright {
+        color: $light-gray;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+        line-height: 3rem;
+        border-top: 1px solid $light-gray;
+        width: 1000px;
+        margin-top: 50px;
+    }
+    
+    @keyframes bg-animation { 
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
         }
     }
 }
