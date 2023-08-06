@@ -4,10 +4,10 @@
 
 .certifications {
     background-color: $very-dark-blue;
-    padding: 100px 10px;
-    margin-top: 50px;
+    padding: 6.25rem 0.625rem;
+    margin-top: 3.125rem;
 
-    &__carrousel {
+    &__carousel {
         display: grid;
         grid-auto-flow: column;
         scroll-behavior: auto;
@@ -18,17 +18,35 @@
         scrollbar-width: none;
         
         &--card {
-            width: 550px;
+            width: 34rem;
             scroll-snap-align: center;
 
             img {
                 border-radius: 5px;
-                width: 550px;
+                width: 100%;
             }
         }
     }
 
-    &__carrousel::-webkit-scrollbar {
+    &__carousel::-webkit-scrollbar {
         display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .certifications {
+        padding: 2rem 0.625rem;
+
+        &__carousel {
+            &--card {
+                width: 20rem;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
     }
 }

@@ -312,10 +312,10 @@ ul {
 
 .certifications {
   background-color: #1E2A3B;
-  padding: 100px 10px;
-  margin-top: 50px;
+  padding: 6.25rem 0.625rem;
+  margin-top: 3.125rem;
 }
-.certifications__carrousel {
+.certifications__carousel {
   display: grid;
   grid-auto-flow: column;
   scroll-behavior: auto;
@@ -325,18 +325,29 @@ ul {
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
 }
-.certifications__carrousel--card {
-  width: 550px;
+.certifications__carousel--card {
+  width: 34rem;
   scroll-snap-align: center;
 }
-.certifications__carrousel--card img {
+.certifications__carousel--card img {
   border-radius: 5px;
-  width: 550px;
+  width: 100%;
 }
-.certifications__carrousel::-webkit-scrollbar {
+.certifications__carousel::-webkit-scrollbar {
   display: none;
 }
 
+@media screen and (max-width: 1200px) {
+  .certifications {
+    padding: 2rem 0.625rem;
+  }
+  .certifications__carousel--card {
+    width: 20rem;
+  }
+  .certifications__carousel--card img {
+    width: 100%;
+  }
+}
 @keyframes fly {
   0%, 100% {
     transform: translateY(0);
