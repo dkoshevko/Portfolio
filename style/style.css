@@ -212,25 +212,25 @@ ul {
   max-width: 20%;
 }
 .realisations__comment h2 {
+  font-size: 1.625em;
   font-weight: 600;
-  font-size: 26px;
 }
 .realisations__comment p, .realisations__comment h2 {
   margin-bottom: 1rem;
 }
 .realisations__comment p {
   color: #1E2A3B;
-  font-size: 18px;
+  font-size: 1.125em;
   font-weight: 300;
 }
 .realisations__comment--mail-btn {
   width: fit-content;
   color: #fff;
+  font-size: 1.125em;
   font-weight: 500;
-  font-size: 18px;
   background-color: #1E2A3B;
-  padding: 0.5rem 1rem;
   border-radius: 25px;
+  padding: 0.5rem 1rem;
   transition: transform 300ms ease-in-out;
 }
 .realisations__comment--mail-btn:hover {
@@ -248,15 +248,14 @@ ul {
 .realisations__gallery--project {
   position: relative;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-  width: 17vw;
-  max-width: 330px;
+  width: 28vw;
   border-radius: 10px;
-  aspect-ratio: 1/1 !important;
   background-color: #fff;
+  aspect-ratio: 3/2 !important;
   transition: transform 300ms ease-in-out;
 }
 .realisations__gallery--project img {
-  width: 17vw;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
@@ -265,17 +264,17 @@ ul {
   position: absolute;
   bottom: 0;
   text-align: left;
-  padding: 10px;
+  padding: 0.625rem;
   color: #fff;
 }
 .realisations__gallery--project__caption h3 {
-  margin-bottom: 0.2rem;
+  font-size: 1.25em;
   font-weight: 500;
-  font-size: 20px;
+  margin-bottom: 0.2rem;
 }
 .realisations__gallery--project__caption p {
+  font-size: 0.938em;
   margin-bottom: 0.5rem;
-  font-size: 15px;
 }
 .realisations__gallery--project__technologies {
   display: flex;
@@ -285,15 +284,15 @@ ul {
   position: absolute;
   top: 10px;
   right: 10px;
-  gap: 0.5rem;
+  gap: 0.2rem;
 }
 .realisations__gallery--project__technologies--tech {
   background-color: #fff;
-  color: #1E2A3B;
-  font-weight: 700;
-  font-size: 16px;
-  border: 2px solid #1E2A3B;
+  border: 1px solid #1E2A3B;
   border-radius: 25px;
+  color: #1E2A3B;
+  font-size: 1em;
+  font-weight: 600;
   padding: 0.2rem 0.5rem;
 }
 .realisations__gallery--project__overlay {
@@ -301,15 +300,96 @@ ul {
   bottom: 0;
   left: 0;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(0, 0, 0) 100%);
-  pointer-events: none;
   width: 100%;
   height: 100%;
   border-radius: 10px;
+  pointer-events: none;
 }
 .realisations__gallery--project:hover {
   transform: scale(1.03);
 }
 
+@media screen and (max-width: 767px) {
+  .realisations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 2rem;
+  }
+  .realisations__comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+  }
+  .realisations__comment img {
+    align-self: baseline;
+  }
+  .realisations__comment h2 {
+    font-size: 1.5em;
+  }
+  .realisations__comment p {
+    font-size: 1em;
+  }
+  .realisations__comment p, .realisations__comment h2 {
+    margin-bottom: 0.5rem;
+    align-self: baseline;
+  }
+  .realisations__comment a {
+    margin-top: 2rem;
+    align-self: last baseline;
+  }
+  .realisations__gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    width: 100%;
+  }
+  .realisations__gallery--project {
+    width: 80vw;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1075px) {
+  .realisations {
+    gap: 2rem;
+    margin: 0 2rem;
+  }
+  .realisations__comment {
+    max-width: 100%;
+    width: 32%;
+  }
+  .realisations__gallery {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 68%;
+  }
+  .realisations__gallery--project {
+    width: 50vw;
+  }
+}
+@media screen and (min-width: 1076px) and (max-width: 1440px) {
+  .realisations {
+    gap: 2rem;
+    margin: 0 2rem;
+  }
+  .realisations__comment {
+    max-width: 100%;
+    width: 22%;
+  }
+  .realisations__gallery {
+    width: 78%;
+  }
+  .realisations__gallery--project {
+    width: 34vw;
+  }
+}
 .certifications {
   background-color: #1E2A3B;
   padding: 6.25rem 0.625rem;
@@ -487,7 +567,6 @@ ul {
   }
   .contact__copyright {
     font-size: 0.75em;
-    width: 100%;
     margin-top: 2rem;
   }
 }
@@ -497,6 +576,9 @@ ul {
   }
   .contact__container p {
     width: 90%;
+  }
+  .contact__copyright {
+    width: 100%;
   }
 }
 * {

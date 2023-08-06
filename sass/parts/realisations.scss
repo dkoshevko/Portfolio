@@ -5,14 +5,15 @@
 .realisations {
     @include flex(row, space-between, flex-start);
     @include center-content;
+
     max-width: 1440px;
 
     &__comment {
         max-width: 20%;
 
         h2 {
+            font-size: 1.625em;
             font-weight: 600;
-            font-size: 26px;
         }
 
         p, h2 {
@@ -21,18 +22,18 @@
         
         p {
             color: $very-dark-blue;
-            font-size: 18px;
+            font-size: 1.125em;
             font-weight: 300;
         }
 
         &--mail-btn {
             width: fit-content;
             color: #fff;
+            font-size: 1.125em;
             font-weight: 500;
-            font-size: 18px;
             background-color: $very-dark-blue;
-            padding: 0.5rem 1rem;
             border-radius: 25px;
+            padding: 0.5rem 1rem;
             transition: transform 300ms ease-in-out;
         }
         &--mail-btn:hover {
@@ -49,16 +50,14 @@
         &--project {
             position: relative;
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
-            width: 17vw;
-            max-width: 330px;
+            width: 28vw;
             border-radius: 10px;
-            aspect-ratio: 1/1 !important;
             background-color: #fff;
+            aspect-ratio: 3/2 !important;
             transition: transform 300ms ease-in-out;
 
             img {
-                width: 17vw;
-                // height: 200px;
+                width: 100%;
                 height: 100%;
                 object-fit: cover;
                 border-radius: 10px;
@@ -68,18 +67,18 @@
                 position: absolute;
                 bottom: 0;
                 text-align: left;
-                padding: 10px;
+                padding: 0.625rem;
 
                 color: #fff;
 
                 h3 {
-                    margin-bottom: 0.2rem;
+                    font-size: 1.25em;
                     font-weight: 500;
-                    font-size: 20px;
+                    margin-bottom: 0.2rem;
                 }
                 p {
+                    font-size: 0.938em;
                     margin-bottom: 0.5rem;
-                    font-size: 15px;
                 }
             }
 
@@ -88,15 +87,15 @@
                 position: absolute;
                 top: 10px;
                 right: 10px;
-                gap: 0.5rem;
+                gap: 0.2rem;
 
                 &--tech {
                     background-color: #fff;
-                    color: $very-dark-blue;
-                    font-weight: 700;
-                    font-size: 16px;
-                    border: 2px solid $very-dark-blue;
+                    border: 1px solid $very-dark-blue;
                     border-radius: 25px;
+                    color: $very-dark-blue;
+                    font-size: 1em;
+                    font-weight: 600;
                     padding: 0.2rem 0.5rem;
                 }
             }
@@ -106,14 +105,105 @@
                 bottom: 0;
                 left: 0;
                 background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
-                pointer-events: none;
                 width: 100%;
                 height: 100%;
                 border-radius: 10px;
+                pointer-events: none;
             }        
         }
         &--project:hover {
             transform: scale(1.03);
         }
+    }
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .realisations {
+        @include flex(column, center, center);
+        gap: 2rem;
+        margin: 0 2rem;
+
+        &__comment {
+            @include flex(column, center, center);
+            max-width: 100%;
+            width: 100%;
+
+            img {
+                align-self: baseline;
+            }
+    
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            p {
+                font-size: 1em;
+            }
+            
+            p, h2 {
+                margin-bottom: 0.5rem;
+                align-self: baseline;
+            }
+
+            a {
+                margin-top: 2rem;
+                align-self: last baseline;
+            }
+        }
+
+        &__gallery {
+            @include flex(column, center, center);
+            gap: 0.7rem;
+            width: 100%;
+    
+            &--project {
+                width: 80vw;
+            }
+        }  
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1075px) {
+    .realisations {
+        gap: 2rem;
+        margin: 0 2rem;
+
+        &__comment {
+            max-width: 100%;
+            width: 32%;
+        }
+
+        &__gallery {
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: nowrap;
+            width: 68%;
+
+            &--project {
+                width: 50vw;
+            }
+        }  
+    }
+}
+
+@media screen and (min-width: 1076px) and (max-width: 1440px) {
+    .realisations {
+        gap: 2rem;
+        margin: 0 2rem;
+
+        &__comment {
+            max-width: 100%;
+            width: 22%;
+        }
+
+        &__gallery {
+            width: 78%;
+
+            &--project {
+                width: 34vw;
+            }
+        }  
     }
 }
