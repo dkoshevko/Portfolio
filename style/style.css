@@ -1,3 +1,22 @@
+@keyframes fly {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes bg-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 header {
   display: flex;
   justify-content: center;
@@ -49,36 +68,6 @@ ul {
     font-weight: 300;
   }
 }
-.presentation {
-  background: linear-gradient(180deg, rgb(30, 42, 59) 10%, rgb(69, 98, 135) 50%, rgb(160, 176, 198) 100%);
-  position: relative;
-}
-.presentation__about {
-  margin: 0 auto;
-  position: relative;
-  max-width: 1440px;
-  padding: 70px 0;
-}
-.presentation__about::before {
-  content: "";
-  height: 440px;
-  position: absolute;
-  top: 80px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("/images/laptop.png");
-  opacity: 0.5;
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: contain;
-  mix-blend-mode: lighten;
-  animation-name: fly;
-  animation-duration: 4s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  /* Animation keyframes pour voler vers le haut */
-}
 @keyframes fly {
   0%, 100% {
     transform: translateY(0);
@@ -87,6 +76,45 @@ ul {
     transform: translateY(-20px);
   }
 }
+@keyframes bg-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.presentation {
+  position: relative;
+  background: linear-gradient(180deg, rgb(30, 42, 59) 10%, rgb(69, 98, 135) 50%, rgb(160, 176, 198) 100%);
+}
+.presentation__about {
+  margin: 0 auto;
+  position: relative;
+  padding: 4.375rem 0;
+}
+.presentation__about::before {
+  content: "";
+  max-height: 27rem;
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/images/laptop.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  mix-blend-mode: lighten;
+  opacity: 0.5;
+  animation-name: fly;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
 .presentation__about--text {
   position: relative;
   z-index: 2;
@@ -94,14 +122,13 @@ ul {
   color: #fff;
 }
 .presentation__about--text h1 {
-  font-size: 50px;
+  font-size: 3.125em;
   font-weight: 500;
   line-height: 1.3em;
 }
 .presentation__about--text p {
   margin-top: 1rem;
-  font-weight: 400;
-  font-size: 18px;
+  font-size: 1.125em;
 }
 .presentation__assets {
   margin: 0 auto;
@@ -111,8 +138,7 @@ ul {
   align-items: center;
   flex-wrap: wrap;
   gap: 3rem;
-  max-width: 1200px;
-  margin: 50px auto;
+  margin-bottom: 5rem;
 }
 .presentation__assets--skill {
   display: flex;
@@ -120,12 +146,60 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  font-size: 14px;
+  font-size: 0.875em;
 }
 .presentation__assets--skill img {
-  height: 60px;
+  height: 3.75rem;
 }
 
+@media screen and (max-width: 767px) {
+  .presentation__about {
+    padding: 2rem 0;
+  }
+  .presentation__about--text h1 {
+    font-size: 2em;
+  }
+  .presentation__about--text p {
+    font-size: 1em;
+  }
+  .presentation__assets {
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+  .presentation__assets--skill {
+    font-size: 0.75em;
+  }
+  .presentation__assets--skill img {
+    height: 2rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .presentation__assets {
+    gap: 2rem;
+  }
+  .presentation__assets--skill {
+    font-size: 0.85em;
+  }
+  .presentation__assets--skill img {
+    height: 2.5rem;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .presentation__about {
+    margin: 0 2rem;
+  }
+  .presentation__assets {
+    margin: 0 2rem 3rem 2rem;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .presentation__about {
+    max-width: 1440px;
+  }
+  .presentation__assets--skill {
+    max-width: 1200px;
+  }
+}
 .realisations {
   display: flex;
   flex-direction: row;
@@ -201,7 +275,6 @@ ul {
 }
 .realisations__gallery--project__caption p {
   margin-bottom: 0.5rem;
-  font-weight: 400;
   font-size: 15px;
 }
 .realisations__gallery--project__technologies {
@@ -264,28 +337,46 @@ ul {
   display: none;
 }
 
+@keyframes fly {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes bg-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .contact {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding-top: 50px;
   background: linear-gradient(0deg, rgb(30, 42, 59) 10%, rgb(69, 98, 135) 50%, rgb(160, 176, 198) 100%);
+  padding-top: 3.125rem;
 }
 .contact__container {
-  background-color: #1E2A3B;
-  background: linear-gradient(90deg, rgb(30, 42, 59) 20%, rgb(69, 98, 135) 75%, rgb(96, 136, 187) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   width: 1000px;
   max-width: 1440px;
   padding: 3rem 0;
   color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background-color: #1E2A3B;
   background: linear-gradient(45deg, rgb(96, 136, 187) 0%, black 100%);
   background-size: 200% 200%;
   animation: bg-animation 6s ease-in-out infinite;
@@ -298,7 +389,6 @@ ul {
   width: 50rem;
   text-align: center;
   font-size: 1.3em;
-  font-weight: 400;
   margin-bottom: 2rem;
 }
 .contact__container--socials {
@@ -310,15 +400,15 @@ ul {
   margin-bottom: 2rem;
 }
 .contact__container--socials a {
-  border: 1px solid #fff;
-  border-radius: 100%;
-  padding: 0.7rem;
-  width: 30px;
-  height: 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  padding: 0.7rem;
+  width: 1.875rem;
+  height: 1.875rem;
   transition: transform 300ms ease-in-out;
 }
 .contact__container--socials a:hover {
@@ -332,12 +422,12 @@ ul {
 }
 .contact__container--mail-btn {
   width: fit-content;
-  color: #fff;
-  font-weight: 500;
-  font-size: 18px;
-  padding: 0.5rem 1rem;
   border: 1px solid #fff;
   border-radius: 25px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.125em;
+  padding: 0.5rem 1rem;
   transition: transform 300ms ease-in-out;
 }
 .contact__container--mail-btn:hover {
@@ -352,27 +442,52 @@ ul {
   display: inline-block !important;
 }
 .contact__copyright {
-  color: #A0B0C6;
-  font-weight: 400;
-  font-size: 14px;
-  text-align: center;
-  line-height: 3rem;
   border-top: 1px solid #A0B0C6;
+  color: #A0B0C6;
+  text-align: center;
+  font-size: 0.875em;
+  font-weight: 400;
+  line-height: 3rem;
   width: 1000px;
-  margin-top: 50px;
-}
-@keyframes bg-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  margin-top: 3.125rem;
 }
 
+@media screen and (max-width: 767px) {
+  .contact__container h5 {
+    font-size: 2em;
+  }
+  .contact__container p {
+    font-size: 1em;
+    margin-bottom: 1rem;
+  }
+  .contact__container--socials {
+    gap: 1rem;
+  }
+  .contact__container--socials a {
+    padding: 0.4rem;
+    width: 1rem;
+    height: 1rem;
+  }
+  .contact__container--socials .fa-linkedin-in, .contact__container--socials .fa-github {
+    font-size: 1em;
+  }
+  .contact__container--socials .malt-logo {
+    width: 90%;
+  }
+  .contact__copyright {
+    font-size: 0.75em;
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .contact__container {
+    width: 90%;
+  }
+  .contact__container p {
+    width: 90%;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -386,6 +501,10 @@ body {
 a {
   text-decoration: none;
   color: #fff;
+}
+
+p {
+  font-weight: 400;
 }
 
 .memoji {

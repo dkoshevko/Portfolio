@@ -1,24 +1,26 @@
 // Import utilities
 @import "../utilities/variables.scss";
 @import "../utilities/mixins.scss";
+@import "../utilities/animations.scss";
+
+
 
 .contact {
     @include center-content;
     @include flex(column, space-between, center);
-    padding-top: 50px;
     background: linear-gradient(0deg, rgba(30,42,59,1) 10%, rgba(69,98,135,1) 50%, rgba(160,176,198,1) 100%);
+    padding-top: 3.125rem;
 
     &__container {
-        background-color: $very-dark-blue;
-        background: linear-gradient(90deg, rgba(30,42,59,1) 20%, rgba(69,98,135,1) 75%, rgba(96,136,187,1) 100%);
+        @include flex(column, center, center);
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
         border-radius: 10px;
         width: 1000px;
         max-width: 1440px;
         padding: 3rem 0;
         color: #fff;
-        @include flex(column, center, center);
 
+        background-color: $very-dark-blue;
         background: linear-gradient(45deg, rgba(96,136,187,1) 0%, darken(rgba(30,42,59,1), 50%) 100%);
         background-size: 200% 200%;
         animation: bg-animation 6s ease-in-out infinite;
@@ -32,7 +34,6 @@
             width: 50rem;
             text-align: center;
             font-size: 1.3em;
-            font-weight: 400;
             margin-bottom: 2rem;
         }
 
@@ -42,15 +43,14 @@
             margin-bottom: 2rem;
             
             a {
+                @include flex(row, center, center);
                 border: 1px solid #fff;
                 border-radius: 100%;
                 padding: 0.7rem;
-                width: 30px;
-                height: 30px;
-                @include flex(row, center, center);
+                width: 1.875rem;
+                height: 1.875rem;
                 transition: transform 300ms ease-in-out;
             }
-
             a:hover {
                 transform: scale(1.1);
             }
@@ -58,7 +58,6 @@
             .fa-linkedin-in, .fa-github {
                 font-size: 1.5em;
             }
-
             .malt-logo {
                 width: 80%;
             }
@@ -66,19 +65,19 @@
 
         &--mail-btn {
             width: fit-content;
-            color: #fff;
-            font-weight: 500;
-            font-size: 18px;
-            padding: 0.5rem 1rem;
             border: 1px solid #fff;
             border-radius: 25px;
+            color: #fff;
+            font-weight: 500;
+            font-size: 1.125em;
+            padding: 0.5rem 1rem;
             transition: transform 300ms ease-in-out;
         }
         &--mail-btn:hover {
             transform: scale(1.1);
             color: $very-dark-blue;
             background-color: #fff;
-            
+
             .fa-envelope {
                 display: none;
             }
@@ -89,25 +88,66 @@
     }
     
     &__copyright {
-        color: $light-gray;
-        font-weight: 400;
-        font-size: 14px;
-        text-align: center;
-        line-height: 3rem;
         border-top: 1px solid $light-gray;
+        color: $light-gray;
+        text-align: center;
+        font-size: 0.875em;
+        font-weight: 400;
+        line-height: 3rem;
         width: 1000px;
-        margin-top: 50px;
+        margin-top: 3.125rem;
     }
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .contact {
+        &__container {
+
+            h5 {
+                font-size: 2em;
+            }
     
-    @keyframes bg-animation { 
-        0% {
-            background-position: 0% 50%;
+            p {
+                font-size: 1em;
+                margin-bottom: 1rem;
+            }
+
+            &--socials {
+                gap: 1rem;
+                
+                a {
+                    padding: 0.4rem;
+                    width: 1rem;
+                    height: 1rem;
+                }
+    
+                .fa-linkedin-in, .fa-github {
+                    font-size: 1em;
+                }
+                .malt-logo {
+                    width: 90%;
+                }
+            }
         }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
+
+        &__copyright {
+            font-size: 0.75em;
+            width: 100%;
+            margin-top: 2rem;
+        }    
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .contact {
+        &__container {
+            width: 90%;
+
+            p {
+                width: 90%;
+            }
+        }    
     }
 }

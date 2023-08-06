@@ -1,47 +1,38 @@
 // Import utilities
 @import "../utilities/variables.scss";
 @import "../utilities/mixins.scss";
+@import "../utilities/animations.scss";
 
 
 
 .presentation {
-    background: linear-gradient(180deg, rgba(30,42,59,1) 10%, rgba(69,98,135,1) 50%, rgba(160,176,198,1) 100%);
     position: relative;
+    background: linear-gradient(180deg, rgba(30,42,59,1) 10%, rgba(69,98,135,1) 50%, rgba(160,176,198,1) 100%);
     
     &__about {
         @include center-content;
         position: relative;
-        max-width: 1440px;
-        padding: 70px 0;
+        padding: 4.375rem 0;
         
+        // Image d'ordinateur flottant
         &::before {
             content: "";
-            height: 440px;
+            max-height: 27rem;
             position: absolute;
-            top: 80px;
+            top: 5rem;
             left: 0;
             right: 0;
             bottom: 0;
             background-image: url("/images/laptop.png");
-            opacity: 0.5;
             background-repeat: no-repeat;
             background-position: right;
             background-size: contain;
             mix-blend-mode: lighten;
+            opacity: 0.5;
             animation-name: fly;
             animation-duration: 4s;
             animation-timing-function: ease-in-out;
             animation-iteration-count: infinite;
-
-            /* Animation keyframes pour voler vers le haut */
-            @keyframes fly {
-                0%, 100% {
-                    transform: translateY(0);
-                }
-                50% {
-                    transform: translateY(-20px);
-                }
-            }
         }
 
         &--text {
@@ -51,15 +42,14 @@
             color: #fff;
 
             h1 {
-                font-size: 50px;
+                font-size: 3.125em;
                 font-weight: 500;
                 line-height: 1.3em;
             }
 
             p {
                 margin-top: 1rem;
-                font-weight: 400;
-                font-size: 18px;
+                font-size: 1.125em;
             }
 
         }
@@ -70,16 +60,15 @@
         @include flex(row, center, center);
         flex-wrap: wrap;
         gap: 3rem;
-        max-width: 1200px;
-        margin: 50px auto;
+        margin-bottom: 5rem;
 
         &--skill {
             @include flex(column, center, center);
             gap: 0.5rem;
-            font-size: 14px;
+            font-size: 0.875em;
 
             img {
-                height: 60px;
+                height: 3.75rem;
             }
         }
     }
@@ -88,9 +77,72 @@
 
 
 @media screen and (max-width: 767px) {
+    .presentation {
+        &__about {
+            padding: 2rem 0;
 
+            &--text {
+
+                h1 {
+                    font-size: 2em;
+                }
+                p {
+                    font-size: 1em;
+                }
+            }
+        }
+
+        &__assets {
+            margin-bottom: 2rem;
+            gap: 1rem;
+
+            &--skill {
+                font-size: 0.75em;
+                
+                img {
+                    height: 2rem;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .presentation {
+        &__assets {
+            gap: 2rem;
 
+            &--skill {
+                font-size: 0.85em;
+
+                img {
+                    height: 2.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .presentation {
+        &__about {
+            margin: 0 2rem;
+        }
+        &__assets {
+            margin: 0 2rem 3rem 2rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    .presentation {
+        &__about {
+            max-width: 1440px;
+        }
+        &__assets {
+            &--skill {
+                max-width: 1200px;
+            }
+        }
+    }
 }
