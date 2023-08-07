@@ -107,7 +107,7 @@ ul a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(".../images/laptop.png");
+  background-image: url("../../images/laptop.png");
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
