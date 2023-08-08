@@ -9,7 +9,7 @@
     max-width: 1440px;
 
     &__comment {
-        max-width: 20%;
+        max-width: 21%;
 
         h2 {
             font-size: 1.625em;
@@ -45,7 +45,7 @@
         @include flex(row, right, stretch);
         flex-wrap: wrap;
         gap: 1.5rem;
-        width: 80%;
+        width: 79%;
 
         &--project {
             position: relative;
@@ -195,11 +195,11 @@
 
         &__comment {
             max-width: 100%;
-            width: 22%;
+            width: 23%;
         }
 
         &__gallery {
-            width: 78%;
+            width: 77%;
 
             &--project {
                 width: 34vw;

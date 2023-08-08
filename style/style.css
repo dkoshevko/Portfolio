@@ -219,7 +219,7 @@ ul a:hover {
   max-width: 1440px;
 }
 .realisations__comment {
-  max-width: 20%;
+  max-width: 21%;
 }
 .realisations__comment h2 {
   font-size: 1.625em;
@@ -253,7 +253,7 @@ ul a:hover {
   align-items: stretch;
   flex-wrap: wrap;
   gap: 1.5rem;
-  width: 80%;
+  width: 79%;
 }
 .realisations__gallery--project {
   position: relative;
@@ -391,10 +391,10 @@ ul a:hover {
   }
   .realisations__comment {
     max-width: 100%;
-    width: 22%;
+    width: 23%;
   }
   .realisations__gallery {
-    width: 78%;
+    width: 77%;
   }
   .realisations__gallery--project {
     width: 34vw;
