@@ -107,7 +107,7 @@ ul a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("../images/laptop.png") !important;
+  background-image: url("../images/laptop.webp") !important;
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
@@ -482,7 +482,7 @@ ul a:hover {
   background-size: 200% 200%;
   animation: bg-animation 6s ease-in-out infinite;
 }
-.contact__container h5 {
+.contact__container h4 {
   font-size: 3em;
   font-weight: 600;
 }
@@ -554,7 +554,7 @@ ul a:hover {
 }
 
 @media screen and (max-width: 767px) {
-  .contact__container h5 {
+  .contact__container h4 {
     font-size: 2em;
   }
   .contact__container p {
