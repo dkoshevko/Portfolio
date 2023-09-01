@@ -160,6 +160,12 @@
     
             &--project {
                 width: 80vw;
+
+                &__caption {
+                    p {
+                        font-size: 0.7em !important;
+                    }
+                }
             }
         }  
     }
